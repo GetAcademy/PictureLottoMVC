@@ -40,6 +40,7 @@
         let animal1 = 'tiger';
         let animal2 = 'tiger';
         let animal3 = 'dog';
+        let lastSelectedAnimal = null;
 
         // view
         updateView();
@@ -64,12 +65,16 @@
         function openSquare(squareIndex) {
             if (squareIndex == 0) {
                 isSquareOpen0 = true;
+                lastSelectedAnimal = animal0;
             } else if (squareIndex == 1) {
                 isSquareOpen1 = true;
+                lastSelectedAnimal = animal1;
             } else if (squareIndex == 2) {
                 isSquareOpen2 = true;
-            } else if (squareIndex == 3) {
+                lastSelectedAnimal = animal2;
+            } else if (squareIndex == 3) {                
                 isSquareOpen3 = true;
+                lastSelectedAnimal = animal3;
             }
             updateView();
         }

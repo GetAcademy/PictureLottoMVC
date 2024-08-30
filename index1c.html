@@ -45,10 +45,10 @@
         updateView();
         function updateView() {
             document.getElementById('app').innerHTML = /*HTML*/`
-                <div onclick="openSquare(0)">${createContentHtml(isSquareOpen0, animal0)}</div>
-                <div onclick="openSquare(1)">${createContentHtml(isSquareOpen1, animal1)}</div>
-                <div onclick="openSquare(2)">${createContentHtml(isSquareOpen2, animal2)}</div>
-                <div onclick="openSquare(3)">${createContentHtml(isSquareOpen3, animal3)}</div>
+                <div>${createContentHtml(isSquareOpen0, animal0)}</div>
+                <div>${createContentHtml(isSquareOpen1, animal1)}</div>
+                <div>${createContentHtml(isSquareOpen2, animal2)}</div>
+                <div>${createContentHtml(isSquareOpen3, animal3)}</div>
             `;
         }
 
@@ -58,20 +58,6 @@
             } else {
                 return '';
             }
-        }
-
-        // controller
-        function openSquare(squareIndex) {
-            if (squareIndex == 0) {
-                isSquareOpen0 = true;
-            } else if (squareIndex == 1) {
-                isSquareOpen1 = true;
-            } else if (squareIndex == 2) {
-                isSquareOpen2 = true;
-            } else if (squareIndex == 3) {
-                isSquareOpen3 = true;
-            }
-            updateView();
         }
 
     </script>
